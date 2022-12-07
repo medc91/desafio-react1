@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Alert from 'react-bootstrap/Alert';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header title="Galeria de imagenes con React" />
+      <Card src="images/martin-pescador.jpg" title="Martin Pescador" text="pajaro" />
+      <Card src="images/Tigre.jpg" title="Tigre" text="Carnivoro" />
+      <Card src="images/elefante.jpg" title="Bebe Elefante" text="Abrevadero" />
+      <Alert key="success" variant="success">
+        Registro exitoso, Bienvenido!
+      </Alert>
+      <Footer title="Todos los derechos reservados" />
     </div>
+
   );
 }
 
